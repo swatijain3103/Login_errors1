@@ -1,5 +1,3 @@
-// components m reacts wagera import nh krte
-// ye file input components ke liye h 
 
 import "./Form.css";
 import { useState } from "react";
