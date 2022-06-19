@@ -20,8 +20,6 @@ const inputs = [
     placeholder:"username",
     errorMessage:"Username should be 3-16 characters",
     label:"Username",
-    // we are now initializing invalid input
-    // there are pattern attribute also with required tag that you define ki kb error show hoga
     required:true,
     pattern:"^([a-zA-Z]{2,}[- ][a-zA-Z]{1,}'?-?[a-zA-Z]{2,}[- ]?([a-zA-Z]{1,})?)"
   },
@@ -34,7 +32,6 @@ const inputs = [
     label:"Email",
     required:true,
     pattern:"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
-    // required se initial all error message will be appear and as soon as user starts typing input then that error will disappear
   },
   {
     id:3,
@@ -55,9 +52,6 @@ const handleSubmit = (e) => {
 }
 
 const onChange = (e) => {
-  // we are now seeting the values for our input
-  // target name = the name attribute given in input field
-  // target value = the values user give
   setValues({...values, [e.target.name]: e.target.value})
 }
 
@@ -68,9 +62,6 @@ console.log(values);
     <div className='app'>
     <form onSubmit={handleSubmit}>  
     <h1>Register</h1>
-    {/* u can put onsubmit on form tag also or in button tag also
-    2. for accessing array we do there using map
-    3. if u are using map then indicate your key like in this id */}
     {inputs.map((input) => (
        <Form className="display"
        key={input.id} 
