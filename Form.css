@@ -1,0 +1,36 @@
+.display{
+    display:flex;
+    flex-direction: column;
+    width:280px;
+}
+
+input{
+    padding:15px;
+    margin:10px 0px;
+    border-radius: 40px;
+    border-color: black;
+
+    /* 1. top and bottom = 10px
+    2. left and right = 0px
+    3. border-radius=5px - box will be rectangle
+    4. border-radius=10px - box will be rectangle with corner curb
+    5. border-radius=60px - box will be full circular */
+  
+}
+
+span{
+    font-size: 12px;
+    padding: 3px;
+    color:red;
+    display:none;
+    /* display none means suru m jb page khali hoga user kuch type nh krega to ye message nh dhikhega */
+}
+input:invalid[focused="true"]{
+    border: 1px solid red;
+    /* 1px se red color ka border ban jayega */
+}
+input:invalid[focused="true"] ~ span{
+    display:block;
+}
+
+
